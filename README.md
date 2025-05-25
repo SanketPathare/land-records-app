@@ -1,6 +1,6 @@
 # 🏡 Land Records Search System
 
-![Land Records System Screenshot](https://public/screenshot.png)
+![Land Records System Screenshot](/public//Screenshot.png)
 
 A **Next.js** application inspired by [Landeed.com](https://www.landeed.com), providing a powerful and intuitive interface for searching and generating land record reports.
 
