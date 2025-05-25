@@ -129,12 +129,6 @@ We welcome contributions! Here’s how you can help:
 
 ----------
 
-## 📄 License
-
-Distributed under the **MIT License**. See `LICENSE` for more details.
-
-----------
-
 ## 📬 Contact
 - Name: Sanket Pathare
 - Mobile: 91+ 9011513014
