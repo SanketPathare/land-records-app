@@ -1,19 +1,22 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { useReactToPrint } from 'react-to-print';
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 interface ReportViewerProps {
   pdfUrl: string;
   iframeRef?: React.RefObject<HTMLIFrameElement>;
 }
 
-export default function ReportViewer({ pdfUrl, iframeRef: propIframeRef }: ReportViewerProps) {
+export default function ReportViewer({
+  pdfUrl,
+  iframeRef: propIframeRef,
+}: ReportViewerProps) {
   const localIframeRef = useRef<HTMLIFrameElement>(null);
   const iframeRef = propIframeRef || localIframeRef;
 
   const handlePrint = useReactToPrint({
-      // @ts-ignore
+    // @ts-ignore
     content: () => iframeRef.current?.contentWindow?.document.body || null,
   });
 
@@ -28,7 +31,7 @@ export default function ReportViewer({ pdfUrl, iframeRef: propIframeRef }: Repor
           Print Report
         </button>
       </div>
-      
+
       <div className="border rounded-lg overflow-hidden">
         <iframe
           ref={iframeRef}
@@ -38,7 +41,7 @@ export default function ReportViewer({ pdfUrl, iframeRef: propIframeRef }: Repor
           className="border-0"
         />
       </div>
-      
+
       <div className="mt-4 flex justify-end">
         <a
           href={pdfUrl}

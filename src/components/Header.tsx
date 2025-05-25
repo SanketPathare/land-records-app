@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useState } from 'react';
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,13 +19,22 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
-            <Link href="/search" className="text-gray-600 hover:text-red-600 transition-colors">
+            <Link
+              href="/search"
+              className="text-gray-600 hover:text-red-600 transition-colors"
+            >
               Search
             </Link>
-            <Link href="/records" className="text-gray-600 hover:text-red-600 transition-colors">
+            <Link
+              href="/records"
+              className="text-gray-600 hover:text-red-600 transition-colors"
+            >
               All Records
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-red-600 transition-colors">
+            <Link
+              href="#"
+              className="text-gray-600 hover:text-red-600 transition-colors"
+            >
               About
             </Link>
           </nav>
@@ -44,9 +53,19 @@ export default function Header() {
               xmlns="http://www.w3.org/2000/svg"
             >
               {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
@@ -55,7 +74,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-            mobileMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
+            mobileMenuOpen ? "max-h-96 mt-4" : "max-h-0"
           }`}
         >
           <nav className="flex flex-col space-y-3 pb-4">

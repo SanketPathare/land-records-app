@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState } from "react";
 
 interface SearchFormProps {
   onSearch: (params: {
@@ -11,9 +10,9 @@ interface SearchFormProps {
 }
 
 export default function SearchForm({ onSearch, loading }: SearchFormProps) {
-  const [parcelNumber, setParcelNumber] = useState('');
-  const [ownerName, setOwnerName] = useState('');
-  const [address, setAddress] = useState('');
+  const [parcelNumber, setParcelNumber] = useState("");
+  const [ownerName, setOwnerName] = useState("");
+  const [address, setAddress] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,7 +22,10 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="parcelNumber" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="parcelNumber"
+          className="block text-sm font-medium text-gray-700"
+        >
           Parcel Number
         </label>
         <input
@@ -34,9 +36,12 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           onChange={(e) => setParcelNumber(e.target.value)}
         />
       </div>
-      
+
       <div>
-        <label htmlFor="ownerName" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="ownerName"
+          className="block text-sm font-medium text-gray-700"
+        >
           Owner Name
         </label>
         <input
@@ -47,9 +52,12 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           onChange={(e) => setOwnerName(e.target.value)}
         />
       </div>
-      
+
       <div>
-        <label htmlFor="address" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="address"
+          className="block text-sm font-medium text-gray-700"
+        >
           Property Address
         </label>
         <input
@@ -60,14 +68,16 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           onChange={(e) => setAddress(e.target.value)}
         />
       </div>
-      
+
       <div>
         <button
           type="submit"
           disabled={loading}
-          className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 ${
+            loading ? "opacity-50 cursor-not-allowed" : ""
+          }`}
         >
-          {loading ? 'Searching...' : 'Search Land Records'}
+          {loading ? "Searching..." : "Search Land Records"}
         </button>
       </div>
     </form>
